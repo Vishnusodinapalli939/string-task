@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>open the console to see the output</h2>
+    <script>
+      str = "hello world";
+      emp = "";
+      for (i of str) {
+        if (!emp.includes(i)) {
+          emp += i;
+        }
+      }
+      emp = emp.split("").sort().join("").trim();
+      // console.log(emp);
+      for (i of emp) {
+        c = 0;
+        for (j of str) {
+          if (i == j) {
+            c++;
+          }
+        }
+        console.log(i + "-" + c);
+      }
+    </script>
+  </body>
+</html>
